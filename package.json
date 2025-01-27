@@ -7,9 +7,7 @@
     "dev": " vite --host",
     "build": " vite build",
     "preview": "vite preview",
-    "convert-img": "node convert-img.js ./src/img/base-img ./src/img",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "convert-img": "node convert-img.js ./src/img/base-img ./src/img"
   },
   "browserslist": [
     "cover 99.5%"
@@ -18,7 +16,6 @@
     "autoprefixer": "^10.4.4",
     "commander": "^12.1.0",
     "fast-glob": "^3.3.1",
-    "gh-pages": "^6.3.0",
     "imagemin": "^8.0.1",
     "imagemin-webp": "^8.0.0",
     "postcss": "^8.4.41",

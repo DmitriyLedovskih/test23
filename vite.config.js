@@ -13,7 +13,7 @@ const SVG_FOLDER_PATH = path.resolve(SRC_PATH, "img", "svg-sprite");
 const origin = "https://your-game-origin.ru";
 
 export default defineConfig({
-  base: "https://storage.yandexcloud.net/backet.wim.agency/test_markup_dev_new/DmitriyLedovskih/test_markup/dist/",
+  base: "./",
 
   // server: {
   // 	proxy: {
@@ -24,16 +24,6 @@ export default defineConfig({
   // 		},
   // 	},
   // },
-
-  server: {
-    cors: false,
-    proxy: {
-      "/api": {
-        target: origin,
-        changeOrigin: true,
-      },
-    },
-  },
 
   plugins: [
     createSvgSpritePlugin({
