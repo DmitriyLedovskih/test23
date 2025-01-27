@@ -1,0 +1,56 @@
+.articles {
+  padding: 50px 0;
+
+  @include breakpoint_min(576px) {
+    padding: 85px 0;
+  }
+
+  .article {
+    &-picture {
+      margin-bottom: 35px;
+      border-radius: var(--radius-5);
+
+      @include breakpoint_min(576px) {
+        margin-bottom: 70px;
+      }
+
+      img {
+        border-radius: var(--radius-5);
+        object-fit: cover;
+        min-height: 157px;
+      }
+    }
+
+    &-content {
+      max-width: 654px;
+    }
+
+    &-title {
+      margin-bottom: 20px;
+
+      @include breakpoint_min(576px) {
+        margin-bottom: 25px;
+      }
+    }
+
+    &-text {
+      margin-bottom: 25px;
+
+      &:last-child {
+        margin-bottom: 30px;
+
+        @include breakpoint_min(576px) {
+          margin-bottom: 50px;
+        }
+      }
+    }
+
+    &-button {
+      max-width: 235px;
+    }
+
+    &-icon {
+      height: 18px;
+    }
+  }
+}

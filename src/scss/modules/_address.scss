@@ -1,0 +1,31 @@
+.address {
+  text-align: center;
+  padding: 60px 0 0;
+
+  @include breakpoint_min(576px) {
+    padding: 85px 0 27px;
+  }
+
+  &-block {
+    font-style: normal;
+  }
+
+  &-title {
+    margin-bottom: 5px;
+
+    @include breakpoint_min(576px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &-text {
+    font-size: var(--fz-16);
+    line-height: var(--lh-24);
+    color: var(--text-main-color);
+
+    @include breakpoint_min(576px) {
+      font-size: var(--fz-26);
+      line-height: var(--lh-32);
+    }
+  }
+}

@@ -1,0 +1,55 @@
+:root {
+  // font-sizes
+  --fz-main: 1em;
+  --fz-56: 56px;
+  --fz-26: 26px;
+  --fz-24: 24px;
+  --fz-22: 22px;
+  --fz-20: 20px;
+  --fz-18: 18px;
+  --fz-16: 16px;
+  --fz-14: 14px;
+  --fz-10: 10px;
+  --fz-8: 8px;
+
+  // font-family
+  --font-main: "Circe", sans-serif;
+
+  // line-height
+  --lh-main: 1;
+  --lh-67: 67px;
+  --lh-38: 38px;
+  --lh-35: 35px;
+  --lh-32: 32px;
+  --lh-29: 29px;
+  --lh-28: 28px;
+  --lh-26: 26px;
+  --lh-24: 24px;
+  --lh-21: 21px;
+  --lh-20: 20px;
+  --lh-19: 19px;
+  --lh-18: 18px;
+  --lh-16: 16px;
+  --lh-14: 14px;
+  --lh-10: 10px;
+
+  // border-radius
+  --radius-5: 5px;
+  --radius-50: 50px;
+  --radius-circle: 50%;
+
+  // primary-color
+  --primary-color: #2489ff;
+  --primary-hover-color: #4494f0;
+
+  //text-color
+  --text-main-color: #35465e;
+  --text-black-color: #000;
+  --text-white-color: #ffffff;
+
+  //--bg-color
+  --bg-form-color: #f2f2f2;
+  --bg-footer-color: #3053b5;
+  --bg-header-active-color: rgba(50, 73, 97, 0.72);
+  --bg-intro-color: rgba(50, 73, 97, 0.72);
+}

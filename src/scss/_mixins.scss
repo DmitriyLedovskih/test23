@@ -1,0 +1,192 @@
+// for media breakpoint
+
+// @use "sass:math";
+// @mixin breakpoint($point, $second-point: null) {
+//   @if $point ==portraits {
+//     @media (orientation: portrait) and (max-aspect-ratio: math.div(3, 5)) {
+//       @content;
+//     }
+//   }
+
+//   @else if $point ==sm {
+//     @media (max-width: 768px) {
+//       @content;
+//     }
+//   }
+
+//   @else {
+//     @media (max-aspect-ratio: math.div($point, $second-point)) {
+//       @content;
+//     }
+//   }
+// }
+
+@mixin breakpoint_min($point) {
+  @if $point==exxl {
+    @media (min-width: 1742px) {
+      @content;
+    }
+  } @else if $point==xxl {
+    @media (min-width: 1600px) {
+      @content;
+    }
+  } @else if $point==xl {
+    @media (min-width: 1537px) {
+      @content;
+    }
+  } @else if $point==elg {
+    @media (min-width: 1367px) {
+      @content;
+    }
+  } @else if $point==lg {
+    @media (min-width: 1280px) {
+      @content;
+    }
+  } @else if $point==md {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $point==emd {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $point==sm {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if $point==esm {
+    @media (min-width: 412px) {
+      @content;
+    }
+  } @else if $point ==portraits {
+    @media (orientation: portrait) and (min-aspect-ratio: 3 / 5) {
+      @content;
+    }
+  }
+
+  //  десктоп
+  @else if $point ==aspect_ratio {
+    @media (min-aspect-ratio: 3 / 5) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $point) {
+      @content;
+    }
+  }
+}
+
+@mixin breakpoint_max($point) {
+  @if $point==exxl {
+    @media (max-width: 1742px) {
+      @content;
+    }
+  } @else if $point==xxl {
+    @media (max-width: 1600px) {
+      @content;
+    }
+  } @else if $point==xl {
+    @media (max-width: 1537px) {
+      @content;
+    }
+  } @else if $point==elg {
+    @media (max-width: 1367px) {
+      @content;
+    }
+  } @else if $point==lg {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  } @else if $point==md {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if $point==emd {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $point==sm {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $point==esm {
+    @media (max-width: 412px) {
+      @content;
+    }
+  } @else if $point ==portraits {
+    @media (orientation: portrait) and (min-aspect-ratio: 3 / 5) {
+      @content;
+    }
+  }
+
+  //  десктоп
+  @else if $point ==aspect_ratio {
+    @media (min-aspect-ratio: 3 / 5) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $point) {
+      @content;
+    }
+  }
+}
+
+// font-settings
+@mixin font-settings($size: false, $lh: false, $weight: false, $color: false) {
+  @if $size {
+    font-size: $size;
+  }
+
+  @if $lh {
+    line-height: $lh;
+  }
+
+  @if $weight {
+    font-weight: $weight;
+  }
+
+  @if $color {
+    color: $color;
+  }
+}
+
+@function vh($value, $screenHeight: 1080) {
+  // Проверка на поддержку dvh
+  @if (support-dvh()) {
+    @return calc($value / $screenHeight) * 100dvh;
+  }
+
+  // Если не поддерживается dvh, используем vh
+  @return calc($value / $screenHeight) * 100vh;
+}
+
+// Вспомогательная функция для проверки поддержки dvh
+@function support-dvh() {
+  @return unquote("dvh") in (unit(100dvh));
+}
+
+@function vw($value, $screenWidth: 1920) {
+  @return calc($value / $screenWidth) * 100vw;
+}
+
+@function vmin($px-value, $viewport-width: 1920, $viewport-height: 1080) {
+  $vmin-value: min($viewport-width, $viewport-height);
+  @return calc(($px-value / $vmin-value) * 100vmin);
+}
+
+// function vmax size
+@function vmax($px-value, $viewport-width: 1920) {
+  @return calc(($px-value / $viewport-width) * 100vmax);
+}
+
+// @mixin size-vh($width, $height, $templateHeight: 1080) {
+//   $unit: if((unquote("dvh") in (unit(100dvh))), "dvh", "vh");
+
+//   width: calc($height / $templateHeight) * calc($width / $height) * 100 +#{$unit};
+//   height: calc($height / $templateHeight) * 100 +#{$unit};
+// }
+
+@mixin size-vw($width, $height, $templateWidth: 1920) {
+  width: calc($width / $templateWidth) * 100vw;
+  height: calc($width / $templateWidth) * calc($height / $width) * 100vw;
+}

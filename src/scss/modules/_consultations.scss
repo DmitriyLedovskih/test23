@@ -1,0 +1,62 @@
+.consultations {
+  padding: 50px 0 60px;
+
+  @include breakpoint_min(576px) {
+    padding: 85px 0;
+  }
+
+  &-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 0;
+
+    @include breakpoint_min(992px) {
+      flex-direction: row;
+      padding: 80px;
+    }
+  }
+
+  &-content {
+    max-width: 100%;
+
+    @include breakpoint_min(992px) {
+      max-width: 460px;
+    }
+  }
+
+  &-list {
+    margin: 25px 0;
+
+    @include breakpoint_min(576px) {
+      margin: 25px 0 30px;
+    }
+  }
+
+  &-descr {
+    color: var(--text-main-color);
+    font-size: var(--fz-14);
+    line-height: var(--lh-20);
+
+    @include breakpoint_min(576px) {
+      font-size: var(--fz-20);
+      line-height: var(--lh-29);
+    }
+  }
+
+  &-text {
+    margin-bottom: 15px;
+    font-size: var(--fz-18);
+    line-height: var(--lh-21);
+  }
+
+  &-form {
+    max-width: 400px;
+    padding: 25px 14px;
+
+    @include breakpoint_min(576px) {
+      padding: 40px;
+    }
+  }
+}

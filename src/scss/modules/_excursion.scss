@@ -1,0 +1,37 @@
+.excursion {
+  top: -60px;
+  position: relative;
+
+  @include breakpoint_min(576px) {
+    top: -80px;
+  }
+
+  &-form {
+    z-index: 5;
+    position: relative;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 28px 14px 41px;
+    box-shadow: 0px -8px 14px 0px rgba(53, 70, 94, 0.02);
+
+    @include breakpoint_min(576px) {
+      padding: 40px 55px;
+    }
+
+    .main-form-input {
+      max-width: 100%;
+
+      @include breakpoint_min(650px) {
+        max-width: 305px;
+      }
+    }
+
+    .main-form-button {
+      max-width: 100%;
+
+      @include breakpoint_min(650px) {
+        max-width: 183px;
+      }
+    }
+  }
+}

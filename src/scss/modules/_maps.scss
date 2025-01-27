@@ -1,0 +1,46 @@
+.maps {
+  position: relative;
+  padding: 27px 0 0;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 5;
+    pointer-events: none;
+  }
+
+  &::before {
+    background: url("/src/img/cloud-01.png") no-repeat center/cover;
+    top: 23px;
+    height: 93px;
+
+    @include breakpoint_min(576px) {
+      top: 0;
+      height: 221px;
+    }
+  }
+
+  &::after {
+    background: url("/src/img/cloud-02.png") no-repeat center/cover;
+    bottom: -21%;
+    height: 422px;
+    display: none;
+
+    @include breakpoint_min(1120px) {
+      bottom: -30%;
+      height: 502px;
+    }
+
+    @include breakpoint_min(576px) {
+      display: block;
+    }
+  }
+
+  .map {
+    width: 100%;
+    height: 615px;
+  }
+}
