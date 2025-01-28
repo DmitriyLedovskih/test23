@@ -1,5 +1,6 @@
 .slider-section {
   padding: 43px 0 0;
+  overflow: hidden;
 
   @include breakpoint_min(576px) {
     padding: 85px 0 0;

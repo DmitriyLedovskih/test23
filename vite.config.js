@@ -10,10 +10,8 @@ import { createHtmlPlugin } from "vite-plugin-html";
 const SRC_PATH = path.resolve(__dirname, "src");
 const SVG_FOLDER_PATH = path.resolve(SRC_PATH, "img", "svg-sprite");
 
-const origin = "https://your-game-origin.ru";
-
 export default defineConfig({
-  base: "./",
+  base: "https://storage.yandexcloud.net/backet.wim.agency/test_markup_dev_new/DmitriyLedovskih/test_markup/dist/",
 
   // server: {
   // 	proxy: {
@@ -85,8 +83,5 @@ export default defineConfig({
           ])
       ),
     },
-  },
-  css: {
-    devSourcemap: true,
   },
 });

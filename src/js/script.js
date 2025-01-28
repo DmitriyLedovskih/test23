@@ -1,15 +1,15 @@
-import { headerScroll } from "./modules/header";
-import { hiddenText } from "./modules/hiddenText";
-import { map } from "./modules/map";
-import { maskPhone } from "./modules/maskPhone";
-import { slider } from "./modules/slider";
+import scrollHeader from "./modules/header.js";
+import textHidden from "./modules/hiddenText.js";
+import map from "./modules/map.js";
+import maskPhone from "./modules/maskPhone.js";
+import swiper from "./modules/slider.js";
 
 const init = () => {
-  headerScroll();
-  slider();
-  hiddenText();
   maskPhone();
+  textHidden();
   map();
+  swiper.init();
+  window.addEventListener("scroll", scrollHeader);
 };
 
 export default init;

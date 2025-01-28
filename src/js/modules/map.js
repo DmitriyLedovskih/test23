@@ -1,4 +1,4 @@
-export const map = async () => {
+const map = async () => {
   await ymaps3.ready;
   const { YMap, YMapDefaultSchemeLayer } = ymaps3;
 
@@ -11,3 +11,5 @@ export const map = async () => {
 
   map.addChild(new YMapDefaultSchemeLayer());
 };
+
+export default map;

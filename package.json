@@ -6,7 +6,7 @@
   "scripts": {
     "dev": " vite --host",
     "build": " vite build",
-    "preview": "vite preview",
+    "preview": "vite preview --host",
     "convert-img": "node convert-img.js ./src/img/base-img ./src/img"
   },
   "browserslist": [
@@ -15,6 +15,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.4",
     "commander": "^12.1.0",
+    "eslint-plugin-import": "^2.31.0",
     "fast-glob": "^3.3.1",
     "imagemin": "^8.0.1",
     "imagemin-webp": "^8.0.0",

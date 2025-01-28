@@ -1,9 +1,9 @@
-export const hiddenText = () => {
-  let isFull;
-  const hiddenButton = document.querySelector(".hidden-button");
-  const hiddenText = document.querySelector(".hidden-text");
-  const hiddenButtonSpan = hiddenButton.querySelector(".hidden-button span");
+let isFull;
+const hiddenButton = document.querySelector(".hidden-button");
+const hiddenText = document.querySelector(".hidden-text");
+const hiddenButtonSpan = hiddenButton.querySelector(".hidden-button span");
 
+const textHidden = () => {
   hiddenButton.addEventListener("click", () => {
     if (!isFull) {
       isFull = true;
@@ -16,3 +16,5 @@ export const hiddenText = () => {
     }
   });
 };
+
+export default textHidden;
